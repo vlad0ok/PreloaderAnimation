@@ -1,0 +1,34 @@
+body {
+  background-color: rgb(77, 77, 77);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.preloader {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50%;
+  border-top: 2px solid red;
+  animation-name: load;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes load {
+  0% {
+    transform: scale(1) rotate(0);
+    background-color: black;
+  }
+  50% {
+    transform: scale(2) rotate(180deg);
+    background-color: gray;
+    border-color: green;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    background-color: black;
+  }
+}
